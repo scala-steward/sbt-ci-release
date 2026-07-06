@@ -90,7 +90,6 @@ By installing `sbt-ci-release` the following sbt plugins are also brought in:
   based on your git history
 - [sbt-pgp](https://github.com/sbt/sbt-pgp): to cryptographically sign the
   artifacts before publishing
-- [sbt-git](https://github.com/sbt/sbt-git): to automatically populate `scmInfo`
 
 Make sure `build.sbt` does not define any of the following settings
 
@@ -395,7 +394,7 @@ your environment.
 Yes, but the plugin is not released for sbt 0.13. The plugin source code is a
 single file which you can copy-paste into `project/CiReleasePlugin.scala` of
 your 0.13 build. Make sure you also
-`addSbtPlugin(sbt-dynver + sbt-sonatype + sbt-gpg + sbt-git)`.
+`addSbtPlugin(sbt-dynver + sbt-sonatype + sbt-gpg)`.
 
 ### How do I publish sbt plugins?
 
