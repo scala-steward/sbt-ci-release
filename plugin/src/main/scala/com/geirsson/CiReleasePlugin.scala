@@ -2,8 +2,6 @@ package com.geirsson
 
 import com.geirsson.PipeFail.PipeFailOps
 import PluginCompat.*
-import com.github.sbt.git.GitPlugin
-import com.github.sbt.git.SbtGit.GitKeys
 import com.jsuereth.sbtpgp.SbtPgp
 import com.jsuereth.sbtpgp.SbtPgp.autoImport.*
 
@@ -26,7 +24,7 @@ object CiReleasePlugin extends AutoPlugin {
 
   override def trigger = allRequirements
   override def requires =
-    JvmPlugin && SbtPgp && DynVerPlugin && GitPlugin
+    JvmPlugin && SbtPgp && DynVerPlugin
 
   def isSecure: Boolean =
     System.getenv("TRAVIS_SECURE_ENV_VARS") == "true" ||
